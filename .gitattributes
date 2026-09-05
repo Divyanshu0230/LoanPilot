@@ -1,0 +1,14 @@
+# GitHub language bar: count product code, hide noise.
+*.ts linguist-detectable=true
+*.tsx linguist-detectable=true
+*.js linguist-detectable=false
+*.mjs linguist-detectable=false
+*.css linguist-documentation
+package-lock.json linguist-generated
+*.md linguist-documentation
+docs/** linguist-documentation
+public/** linguist-vendored
+scripts/** linguist-vendored
+*.svg linguist-vendored
+*.png linguist-vendored
+*.ico linguist-vendored
