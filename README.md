@@ -2,12 +2,15 @@
 
 **Know your number before the bank tells you theirs.**
 
+**Live demo:** [loanpilot-iota.vercel.app](https://loanpilot-iota.vercel.app)
+
 A self-assessment for an Indian borrower who is about to walk into a lender. It answers four questions — **should I borrow, how much is actually mine, what is a fair rate, what EMI do I agree to** — and prints a one-page negotiation card.
 
 No login. No bureau. No database. Answers live in `sessionStorage` on this machine and vanish when the tab does.
 
+[![Live](https://img.shields.io/badge/Live-Vercel-000000?logo=vercel)](https://loanpilot-iota.vercel.app)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](#stack)
-[![Next.js](https://img.shields.io/badge/Next.js-15-000000?logo=nextdotjs)](#stack)
+[![Next.js](https://img.shields.io/badge/Next.js-15.2.8-000000?logo=nextdotjs)](#stack)
 [![React](https://img.shields.io/badge/React-19-087EA4?logo=react)](#stack)
 [![Tests](https://img.shields.io/badge/Vitest-18_passing-1f5c45)](#run-it-under-5-minutes)
 
@@ -24,7 +27,11 @@ npm test
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). You land on the **dashboard**.
+Open [http://localhost:3000](http://localhost:3000) locally, or the live app at [loanpilot-iota.vercel.app](https://loanpilot-iota.vercel.app). You land on the **dashboard**.
+
+### Deploy
+
+Hosted on **Vercel** (Next.js, Node 20). `render.yaml` is also in the repo if you want a Render web service instead.
 
 ```bash
 npm run personas    # reprint Priya / Ravi / Anita in the terminal
