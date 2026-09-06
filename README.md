@@ -41,7 +41,7 @@ npm run personas    # reprint Priya / Ravi / Anita in the terminal
 
 ## Product tour
 
-Screenshots are in click order — the path you would walk in a room.
+Screenshots, in the order I click.
 
 ### 1. Dashboard
 
@@ -123,7 +123,7 @@ He asked for a personal loan. The file becomes a loan on the shop. Unknown ≠ 3
 
 ### 14. Anita — don’t borrow
 
-A bounce plus 24%+ paper. Don’t-borrow is a real product answer. Cheaper door: gold, wait, don’t sign.
+A bounce plus 24%+ paper. Don’t borrow. Cheaper door: gold, wait, don’t sign.
 
 ![Anita result](docs/screenshots/14-result-anita.png)
 
@@ -137,7 +137,7 @@ Tap **आ आसान हिंदी**. Same engine, simpler words.
 
 ## High-level system design
 
-One machine. One judgement. Two doors (browser and API) so a follow-up change to a constant moves every surface.
+Browser and API call the same `assess()` function. Change a constant and every screen moves.
 
 ```mermaid
 flowchart LR
@@ -178,7 +178,7 @@ flowchart LR
 
 Nothing is stored on a server. There is no auth, no bureau pull, no Postgres.
 
-### C4 — containers
+### How the pieces sit
 
 ```mermaid
 flowchart LR
@@ -291,7 +291,7 @@ flowchart TD
   V -->|ask sits inside the safe band| B[borrow]
 ```
 
-### Two amounts (the product thesis)
+### Two amounts
 
 | Number | What it is | What it is not |
 |---|---|---|
@@ -317,7 +317,7 @@ Unknown credit score is **`null`**, never 300.
 | Tests | Vitest — 18 engine tests | Domain rules, not button clicks |
 | Style | Tailwind 4 · Newsreader / Source Sans 3 / IBM Plex Mono | Readable on a phone at the branch |
 
-Deliberately not added: auth, Postgres, Redis, Docker, a bureau SDK, an ML model. Extra infrastructure would have been theatre.
+I did not add auth, Postgres, Redis, Docker, a bureau, or an ML model. They would store people and slow the first run from the README.
 
 ---
 
@@ -350,7 +350,7 @@ docs/screenshots/ product tour
 |---|---|
 | [`RULES.md`](RULES.md) | Every threshold, why, and what I do not know |
 | [`RUNTHROUGHS.md`](RUNTHROUGHS.md) | Priya, Ravi, Anita — questions, four outputs, cards |
-| [`WALKTHROUGH.md`](WALKTHROUGH.md) | Five-minute written walkthrough |
+| [`WALKTHROUGH.md`](WALKTHROUGH.md) | Written walkthrough — what to click, what I would add, what I would leave out |
 
 ---
 

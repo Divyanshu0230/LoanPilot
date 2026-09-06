@@ -1,6 +1,6 @@
 # Three run-throughs
 
-Numbers below are what `npm run personas` prints from `src/engine/personas.ts` — the same engine the UI uses. I am scored on the reasoning, not on matching Lokta’s private ranges.
+Numbers below are what `npm run personas` prints from `src/engine/personas.ts`. Same engine as the UI.
 
 A few facts the brief did not give, which I had to type so the must-set could run:
 
@@ -122,7 +122,7 @@ He did not see employer type, variable bonus, or card utilisation.
 | **Product** | **Loan against property.** Unencumbered shop of ₹45L should be pledged. Do not walk in for an unsecured personal loan. |
 | **O2 Lender sanction** | ₹10,90,000 – ₹23,40,000. Wide, on purpose: no bureau, ITR only ₹4.2L, LTV on ₹45L would allow more than FOIR on documents. Low end is FOIR on ITR + 70% of wife; high end is LTV. |
 | **O2 Safe carry** | ₹11,60,000 – ₹14,50,000 on the ₹40,000 thin month + 80% of wife. **Use this one.** Recommended ₹14,50,000. |
-| **O3 Fair rate** | 9.7% – 13.9% on **LAP**. All-in APR including 1.2% fee+GST: **10.5% – 15.2%.** An unsecured PL quote at 18–22% is the thing the card exists to refuse. |
+| **O3 Fair rate** | 9.7% – 13.9% on **LAP**. All-in APR including 1.2% fee+GST: **10.5% – 15.2%.** An unsecured PL quote at 18–22% is what the card tells him to refuse. |
 | **O4 EMI ceiling** | **₹20,500 / month** over 120 months. |
 
 **Why the two amounts differ.** The lender’s high number is the shop. The borrower’s number is the till in a thin month. They are not supposed to match. If a banker says “we can do 22 lakh against the premises”, that is a sales sentence.
@@ -148,7 +148,7 @@ He did not see employer type, variable bonus, or card utilisation.
 
 **Ask.** ₹1,50,000 for an electric scooter to double delivery runs.
 
-This is the file where **Don’t borrow must fire**. The scooter is productive. The household is not ready.
+This is where I said no. The scooter would help her earn. The household still cannot carry it.
 
 ### Questions the app asked
 
@@ -192,7 +192,7 @@ She did not see MNC employer, ITR, or card utilisation.
 
 **What she can do tomorrow.** Do not sign a scooter form. If there is gold in the house, a gold loan at 10–14% to retire the ₹35,000 app stack saves more than the scooter can earn. Revisit a used scooter in six clean months.
 
-**Stress.** Already failed in the base case. The −20% case is theatre.
+**Stress.** Already failed in the base case. Income −20% does not change the answer.
 
 **Confidence.** Medium, capped — no score, informal file.
 
@@ -201,7 +201,7 @@ She did not see MNC employer, ITR, or card utilisation.
 > **Do not sign today**  
 > 35 yrs · informal · ₹28,000/mo · score unknown  
 > Ask ₹0. Walk away from any new EMI.  
-> If they quote a 2W at 18% on ₹1,00,000, that is the thing this card exists to refuse.  
+> If they quote a 2W at 18% on ₹1,00,000, refuse it.  
 > **Refuse:** any app loan, top-up, or 30% “instant” offer.  
 > **Insist on:** nothing new. Gold only to retire the 32% paper, if metal exists.
 

@@ -1,24 +1,21 @@
-Subject: Submission — Borrower Copilot Build Challenge | Divyanshu Pratap Singh
+Subject: Borrower Copilot — Divyanshu Pratap Singh
 
 Hi Lokta Team,
 
-Please find my Borrower Copilot submission. The four deliverables are at the root of the repo, in the order in the brief.
+I have finished the Borrower Copilot. Repo and live app:
 
-Public repo:  https://github.com/Divyanshu0230/LoanPilot
-Live app:     https://loanpilot-iota.vercel.app
+https://github.com/Divyanshu0230/LoanPilot
+https://loanpilot-iota.vercel.app
 
-1. Working app — README.md (local run under 5 minutes) and the live URL above
+1. Working app — README.md (under 5 minutes locally) and the live link
 2. RULES.md — every threshold, why, and what I do not know
 3. Three run-throughs — RUNTHROUGHS.md (Priya, Ravi, Anita)
-4. Five-minute walkthrough — WALKTHROUGH.md
+4. Walkthrough — WALKTHROUGH.md (written, not a video)
 
-Cover sheet: SUBMISSION.md
+I wrote how I built it in SUBMISSION.md.
 
-No login, no bureau, nothing stored. To change a rule live in the follow-up, open /studio or edit FOIR_SAFE_PERSONAL in src/engine/rules.ts.
-
-Happy to walk through Ravi first in the 60-minute session.
+No login, no bureau, nothing stored. Happy to start with Ravi if we sit together.
 
 Thank you,
 Divyanshu Pratap Singh
 divyanshupratap23@gmail.com
-https://github.com/Divyanshu0230

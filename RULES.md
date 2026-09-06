@@ -4,15 +4,15 @@ Every number the app shows is a named constant in `src/engine/rules.ts`. This fi
 
 I am not a credit officer and I did not pull a live bank grid. Where I am guessing, the last column says so.
 
-## How the machine thinks
+## Order of steps
 
-1. **Normalise income.** A lender and a household do not see the same rupee. Payslips, ITR and till cash are three different numbers.
-2. **Route the product.** Collateral and purpose can override what the borrower walked in asking for. Ravi’s “personal loan” becomes a shop-secured LAP.
-3. **Price a band, not a point.** Unknown score is a wide band. It is never 300.
-4. **Build two amounts.** Lender sanction (FOIR × documented income, LTV, multiples). Borrower-safe (residual after the house is fed, then haircuts).
-5. **Decide the verdict.** Don’t borrow is a first-class result.
-6. **Emit an EMI ceiling and one stress case.** Income −20% or rate +200 bps, whichever is nastier.
-7. **Widen every band as answers go missing.** Silence does not invent a thin, confident number.
+1. **Income.** Payslip, ITR and till cash are three different numbers. A lender and a household do not see the same rupee.
+2. **Product.** Collateral and purpose can beat what they walked in asking for. Ravi’s personal loan becomes a shop-secured LAP.
+3. **Rate as a band.** Unknown score is a wide band. It is never 300.
+4. **Two amounts.** What a lender may sanction (FOIR on documents, LTV). What the house can carry (tighter FOIR, buffers, haircuts).
+5. **Verdict.** Don’t borrow is a real answer.
+6. **EMI ceiling and one stress case.** Income −20% or rate +200 bps, whichever is worse.
+7. **Missing answers widen the band.** I do not invent a tight number from a blank.
 
 ## Thresholds
 
@@ -44,7 +44,7 @@ I am not a credit officer and I did not pull a live bank grid. Where I am guessi
 | Consumption EMI haircut | × 0.80 | A wedding does not earn. | My judgement |
 | Consumption principal cap | 6× monthly take-home | Beyond six months of pay the borrower is financing a lifestyle spike with years of interest. | My judgement |
 | Emergency savings &lt; 3 months | Safe EMI × 0.65 | The first shock becomes a second loan. | My judgement |
-| Emergency savings unanswered | Safe EMI × 0.85, band widened | We do not invent six months of FD. | Assignment: confidence widens with silence |
+| Emergency savings unanswered | Safe EMI × 0.85, band widened | I do not invent six months of FD. | My judgement |
 | Stated extra monthly earn from the loan | 40% counted | Everyone over-forecasts the second stock line. | My judgement |
 | Bounce in last 12 months | +3pp rate; lender amount ×0.4–0.7; new EMI capped at 8% of income | The file is already talking. | My judgement |
 | Bounce unanswered | +0.5pp on the top of the band, no Don’t-borrow fire | Assuming a clean file would narrow a verdict we have no basis to narrow. Assuming a bounce would invent a stain. | My judgement |
@@ -67,9 +67,9 @@ I am not a credit officer and I did not pull a live bank grid. Where I am guessi
 | Stress case | Income −20% **or** rate +200 bps, worse FOIR wins | Informal and bonus-linked pay already move 20%. Rate resets happen. | My judgement |
 | Minimum meaningful loan | ₹25,000 | Below this we print zero rather than a toy ticket. | My judgement |
 | Confidence mix | 62% must-set + 38% additional | The must-set has to work on its own. Extra answers earn the rest. | My judgement |
-| Confidence cap if score unknown | 58% | We will not claim a tight rate without a bureau. | Assignment + my judgement |
-| Confidence cap if expenses unknown | 62% | Surplus is a guess. | Assignment + my judgement |
-| Band widen per missing confidence | +12% amount spread; rate widens by up to ~2.4pp | Fewer answers, wider band, and the app says so. | Assignment |
+| Confidence cap if score unknown | 58% | I will not claim a tight rate without a bureau. | My judgement |
+| Confidence cap if expenses unknown | 62% | Surplus is a guess. | My judgement |
+| Band widen per missing confidence | +12% amount spread; rate widens by up to ~2.4pp | Fewer answers, wider band, and the app says so. | My judgement |
 
 ## Rate tables (headline %, 2026)
 
@@ -137,7 +137,7 @@ The number the borrower should **use** is always the safe number. The lender num
 
 Nine must questions produce all four outputs with wide bands and low confidence.
 
-Every additional question is wired to at least one output. The test `each additional question changes at least one output` will fail a dead question. Cut it; don’t keep it for colour.
+Every extra question is wired to at least one output. If it never moves a number, I delete it. There is a test for that.
 
 Adaptive paths: a salaried MNC sees employer, tenure, variable pay, card utilisation. A kirana owner sees vintage, ITR, cash range, collateral. A rider sees cash range and the rate on the app loans. They do not see each other’s 30 questions.
 

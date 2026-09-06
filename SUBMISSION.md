@@ -27,7 +27,7 @@ No login. I do not save a name or pull a credit report. If someone does not know
 
 The borrower taps through everyday questions. They get four outputs and a card they can hold up.
 
-**Should I borrow?** Yes, take less, or don’t. Don’t is a real answer — Anita hits it.
+**Should I borrow?** Yes, take less, or don’t. Anita is don’t.
 
 **How much?** Two numbers. What a bank may sanction, and what the household can carry. I tell them to walk in with the second one.
 
@@ -121,23 +121,14 @@ The brief did not give every household number. I wrote what I typed and why at t
 
 ---
 
-## 4. Five-minute walkthrough
+## 4. Walkthrough
 
-Written walkthrough, what I would add later, and what I would cut: [`WALKTHROUGH.md`](WALKTHROUGH.md).
+Written, not a video. What I would add later, and what I would leave out: [`WALKTHROUGH.md`](WALKTHROUGH.md).
 
-I would open this on a phone. Laptop only for `/rules`.
+Order I click: **Ravi** (shop loan, two amounts, unknown is not 300), **Priya** (bank can fund ₹8L, she should not take it), **Anita** (don’t borrow, sales number vs ₹0), then `/studio` — pull “Safe EMI share — salaried” down. Priya’s safe number falls. Ravi barely moves. He is on LAP.
 
-1. Home, then **Ravi**. Shop loan. Two amounts. Unknown is not 300. Card says no to an 18% personal loan.
-2. **Priya.** Bank can fund ₹8L. She should not take it. EMI ₹20,000, not ₹30,000.
-3. **Anita.** Don’t borrow. Sales number vs ₹0.
-4. `/studio`. Pull “Safe EMI share — salaried” down. Priya’s safe number falls. Ravi barely moves — he is on LAP.
+Later I would add a bank-statement check on the phone, more than one quote on the card, a real gold number for Anita, Kannada on the card, and a public rate list so the fair band is less of a guess.
 
-Later I would add an on-device bank-statement check, three quotes on the card, a real gold ticket to clear Anita’s 32% stack, Kannada on the card, and a public rate tape so the fair band is less of a guess.
+I would not add more loan types, a database, or a chatbot. Nine must-questions is enough.
 
-I would not add more loan products, a database, or a chatbot that makes up questions. Nine must-questions is enough. If the first screen is long, people leave before the verdict.
-
----
-
-I would start a conversation on Ravi, then Anita, then change `FOIR_SAFE_PERSONAL` from 0.40 to 0.35. Priya’s household number moves. The bank number does not.
-
-That is the product I made: their number is what they can sell. Mine is what the house can carry.
+If you change `FOIR_SAFE_PERSONAL` from 0.40 to 0.35, Priya’s household number moves. The bank number does not.

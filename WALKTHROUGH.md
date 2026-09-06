@@ -1,73 +1,72 @@
-# Five-minute walkthrough
+# Walkthrough
 
-I would sit with this open on a phone and on a laptop. The product is the phone. The laptop is for `/rules`.
+I did not make a video. The assignment said written is fine, so this is that.
 
-## Minute 0–1 — the gap
+Open the live app or `localhost:3000`. A phone is enough. Use a laptop only if you want `/rules` or `/studio` side by side.
 
-Open `/`. You land on a borrower dashboard: rate board, tools, sample files. No interview notes. The thesis is the brief’s thesis: the lender has a model, the borrower walks in blind. Four outputs, a card, no login.
+## Home
 
-Click **Ravi** (or open `/result?persona=ravi`). This is the file that decides whether I understood the product.
+You land on a dashboard — rate board, tools, three sample files. No login.
 
-## Minute 1–2 — Ravi, the reroute
+I open **Ravi** first (`/result?persona=ravi`). He is the one where the product can go wrong.
 
-He asked for a personal loan. The result page should say **loan against property** in the first screen of O3, and the verdict should be **borrow less**, not don’t, not a blank cheque for ₹15L.
+## Ravi
 
-Point at the two amount bands.
+He asked for a **personal loan** of ₹15L (stock + a vehicle). The page should say **loan against property**. Verdict is **borrow less**, not yes to fifteen, not don’t borrow.
 
-- Lender high (~₹23L) is the shop.
-- Safe high (~₹14.5L) is a thin month at the till plus 80% of his wife’s ₹18,000.
-- The number he should use is the second one.
+Two amounts on the same screen:
 
-Say out loud: *unknown score was not priced as 300. We priced the premises.*
+- Bank high (~₹23L) is the ₹45L shop.
+- Safe high (~₹14.5L) is a thin month at the till plus most of his wife’s ₹18,000.
 
-Open the printable card. The refuse line is the point of the company: **do not sign an 18% unsecured PL**.
+Use the second one. His score is “I don’t know”. That is not 300. I priced the shop.
 
-## Minute 2–3 — Priya, consumption
+Open the card. It tells him not to sign an 18% personal loan.
 
-Back, click **Priya**.
+## Priya
 
-A 780 MNC file will get a wedding PL. That is not the question. The question is whether she should.
+Go back, open **Priya**.
 
-O1 is **borrow less**. O2 is the whole product: lender ₹17–18L, safe ₹5.3–6.1L. If I only built a sanction estimator I would have told her yes, take eight. The EMI ceiling is ₹20,000 because ₹30,000 is the banker’s FOIR, not the household’s.
+A 780 MNC file will get a wedding loan. I still said **borrow less**. Bank side is about ₹17–18L. I only leave her ₹5.3–6.1L. EMI cap is ₹20,000. ₹30,000 is a bank FOIR number, not hers.
 
-If they quote 14%, the card already has the sentence.
+₹8L at ~11% for 3 years is already about ₹26,000 EMI. That is why eight is too much.
 
-## Minute 3–4 — Anita, Don’t borrow
+If the desk says 14%, that is already above my 10.5–12.3% band. The card has that line.
 
-Click **Anita**.
+## Anita
 
-Don’t borrow has to be reachable. Here it is latched by a warm bounce plus 32% app paper, not by moralising about scooters. The scooter is the only productive ask of the three. The household still cannot carry it.
+Open **Anita**.
 
-O2 is the honest trick: lender ₹70k–₹1.2L is what a salesman will try. Safe is ₹0. Use the zero.
+**Don’t borrow.** Bounce last month, 32% app loans. The scooter would help her earn. The house cannot take another EMI.
 
-## Minute 4–5 — change a rule
+A counter can still quote ₹70k–₹1.2L. Safe is ₹0. That zero is the answer.
 
-Open `/studio` (Rate lab). Drag **Safe EMI share — salaried** down. Priya’s safe amount falls; Ravi barely moves (he is on a shop loan). Same thing lives in `src/engine/rules.ts` as `FOIR_SAFE_PERSONAL`.
+## Move a rule
 
-Then `/compare` for the three files on one page, `/practice` for the 14% desk conversation, and `/pack?persona=priya` for what she carries tomorrow.
+Open `/studio`. Drag **Safe EMI share — salaried** down. Priya’s safe number falls. Ravi barely moves — he is on a shop loan. Same value is `FOIR_SAFE_PERSONAL` in `src/engine/rules.ts`.
 
-Then open `/rules`. Same table as `RULES.md`. The borrower is allowed to see the model.
+Then, if you still have time:
 
-`npm test` covers the three files, “unknown ≠ 300”, wait-vs-borrow, and “every extra question moves a number”.
+- `/compare` — three files, one table
+- `/practice` — someone offers 14% on ₹8L
+- `/pack?persona=priya` — what she carries tomorrow
+- `/rules` — same table as `RULES.md`
 
----
+`npm test` checks the three files, unknown score, and that every extra question moves a number.
 
-## What I would build next
+## What I would add later
 
-1. **Bank-statement optional upload, on-device.** Average credits vs the number they typed. Still no server store. Tightens Ravi’s till vs ITR gap.
-2. **Offer-compare on the card.** Paste three sanction letters. We already take one quoted rate; three would make the card a worksheet.
-3. **Gold-refinance path as a first-class verdict.** Anita today is “don’t, and a sentence about gold”. Tomorrow it should be a computed gold ticket that retires the 32% stack, with the EMI of that ticket vs the app EMIs.
-4. **Vernacular.** The card has to work in Kannada and Hindi in a Hubballi branch. The engine does not care.
-5. **A live rate tape, even a stale one.** I said in RULES.md that 2026 bands are my judgement. A monthly public scrape of advertised PL/LAP/gold would make O3 less of a shrug.
+1. Bank statement on the phone only — no server. Helps on Ravi (till vs ITR).
+2. Paste two or three sanction letters on the card, not just one rate.
+3. For Anita, actually work out a gold loan that pays off the 32% apps, not only a sentence.
+4. Kannada on the card. She is in Hubballi.
+5. Even an old public rate list, so the fair band is not only my guess. I already said that in RULES.md.
 
-## What I would cut
+## What I would leave out
 
-- **Any more loan products.** The brief said the three borrowers are enough. I already have home-loan constants I barely use.
-- **A backend database.** It would have violated the brief and slowed the first run.
-- **A chatbot wrapper.** The questions are the product. A model that improvises them would hide the rules I need to defend.
-- **Pixel decoration.** The type is the brief’s type. I did not add a dashboard of charts that do not change a decision.
-- **Must-questions beyond nine.** If the must-set grows, people bounce before O1. Additional questions have to earn the next tap.
+- More loan types. I already have home-loan numbers I barely use.
+- A database. That stores people, and the first run from the README gets slower.
+- A chatbot. Then I cannot stand by the questions.
+- Extra must-questions. Nine is enough. If the start is long, they leave before the verdict.
 
-## What I would not apologise for
-
-Don’t borrow on Anita. Routing Ravi to LAP. Telling Priya her banker is not her friend. Printing APR with GST on the fee. Leaving unknown as unknown.
+I would keep Anita as don’t borrow, Ravi on the shop, and unknown as unknown.
