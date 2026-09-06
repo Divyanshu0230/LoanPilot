@@ -234,7 +234,7 @@ export const RULE_CATALOG: RuleRow[] = [
     what: "FOIR cap — personal loan, prime salaried",
     value: "50%",
     why: "Private banks often sanction PL up to ~50% of net for 750+ MNC/govt. That is the lender's number, not a safe household number.",
-    source: "My judgement, typical 2024–26 private-bank PL grids",
+    source: "My judgement. Banks do not publish a statutory FOIR",
   },
   {
     id: "FOIR_SAFE_PERSONAL",
@@ -262,7 +262,7 @@ export const RULE_CATALOG: RuleRow[] = [
     what: "Unknown credit score",
     value: "Not 300. A wide band.",
     why: "No file is not a defaulted file. Thin-file pricing is its own band; treating 'I don't know' as 300 would invent a stain.",
-    source: "Assignment rule + my judgement",
+    source: "My judgement — no file is not a defaulted file",
   },
   {
     id: "UNDOCUMENTED_LENDER_HAIRCUT",
@@ -297,14 +297,14 @@ export const RULE_CATALOG: RuleRow[] = [
     what: "LTV on shop / commercial premises",
     value: "50–60%",
     why: "A kirana premises is not a Bandra flat. Commercial / mixed-use LAP is haircut harder than home LTV.",
-    source: "My judgement, typical LAP LTV",
+    source: "My judgement. RBI home LTV ([5] in RULES.md) does not apply to a shop",
   },
   {
     id: "LTV_GOLD",
     what: "LTV on gold",
     value: "65–75%",
     why: "RBI-linked gold-loan practice sits around three-quarters of appraised value; we stay inside that.",
-    source: "Public gold-loan practice + my judgement",
+    source: "RBI gold-loan LTV ceiling 75% — RULES.md [3]",
   },
   {
     id: "CONSUMPTION_SAFE_HAIRCUT",
@@ -332,7 +332,7 @@ export const RULE_CATALOG: RuleRow[] = [
     what: "Safe EMI if savings months unanswered",
     value: "× 0.85, band widened",
     why: "We do not invent six months of FD. Silence makes the safe number smaller and wider.",
-    source: "Assignment: confidence widens with silence",
+    source: "My judgement",
   },
   {
     id: "PRODUCTIVE_EARN_COUNT",
@@ -360,13 +360,13 @@ export const RULE_CATALOG: RuleRow[] = [
     what: "Processing fee used for APR",
     value: "Product fee + 18% GST",
     why: "RBI-style all-in cost. A 12% headline with 2% fee is not 12%. We show the IRR on net disbursal.",
-    source: "RBI fair-practices spirit + GST rate",
+    source: "RBI KFS / APR [1]; GST 18% on banking services [2] — see RULES.md",
   },
   {
     id: "STRESS",
     what: "Stress case",
     value: "Income −20% or rate +200 bps (worse of the two for FOIR)",
-    why: "India's informal and bonus-linked pay already moves 20%. Rate resets happen. The EMI they agree tonight must survive both.",
+    why: "India's informal and bonus-linked pay already moves 20%. Rate resets happen. If the first ticket fails stress, I cut the walk-in ask. Safe high stays the normal-month ceiling.",
     source: "My judgement",
   },
   {
@@ -402,6 +402,6 @@ export const RULE_CATALOG: RuleRow[] = [
     what: "Headline rate bands",
     value: "See RATE_* tables in this file",
     why: "Not a live market feed. Anchored to late-2025 / 2026 public PL, LAP, gold, 2W and home ranges I have seen advertised, then widened for thin files.",
-    source: "My judgement — not a bureau or bank API",
+    source: "Anchored to advertised pages in RULES.md [4][6][7], then widened. Not a live feed",
   },
 ];

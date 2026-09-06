@@ -58,7 +58,7 @@ Skipped-on-purpose: emergency months. Safe EMI stays haircut 15%.
 | **O1 Verdict** | **Borrow less.** Lenders will fund a wedding. She should not take ₹8,00,000. It earns nothing. Safe carry is ₹5,30,000–₹6,10,000. |
 | **O2 Lender sanction** | ₹17,10,000 – ₹18,20,000. 50% FOIR on a prime MNC file, 5-year tenure, 780 score. They can sell her more than twice the ask. |
 | **O2 Safe carry** | ₹5,30,000 – ₹6,10,000. **Use this one.** |
-| **O3 Fair rate** | 10.5% – 12.3% headline. All-in APR including 2.4% fee+GST: **12.7% – 14.9%.** A 14% sticker is already above fair. |
+| **O3 Fair rate** | 10.5% – 12.3% headline. All-in APR including 2.4% fee+GST: **12.9% – 14.9%.** A 14% sticker is already above fair. |
 | **O4 EMI ceiling** | **₹20,000 / month** at a 36-month recommended ticket of ₹6,10,000. |
 
 **Why ₹20,000 and not ₹30,000.** After the car EMI and ₹50,000 household, a 15% buffer and a 20% consumption haircut, ₹20,000 is what is left. ₹30,000 is what a 50% FOIR banker can extract — that is their number, not hers. ₹8,00,000 at ~11% for 36 months is already ~₹26,000 EMI. That is why the ask is “borrow less”, not “borrow”.
@@ -72,7 +72,7 @@ Skipped-on-purpose: emergency months. Safe EMI stays haircut 15%.
 > **Borrow less than ₹8,00,000**  
 > 29 yrs · salaried · ₹1,10,000/mo · score 780  
 > Ask ₹6,10,000. Walk away above ₹6,10,000 or EMI ₹20,000 or a sticker above 12.3%.  
-> Fair 10.5–12.3%. APR 12.7–14.9%.  
+> Fair 10.5–12.3%. APR 12.9–14.9%.  
 > If they quote 14%, the extra points are theirs, not the market.  
 > They may wave ₹17–18L. Ignore it.  
 > Refuse a top-up that pushes EMI above this card.
@@ -121,7 +121,7 @@ He did not see employer type, variable bonus, or card utilisation.
 | **O1 Verdict** | **Borrow less.** He *should* borrow, on the right product. ₹15,00,000 sits a little above the ₹11,60,000–₹14,50,000 he can carry if the till has a thin month. |
 | **Product** | **Loan against property.** Unencumbered shop of ₹45L should be pledged. Do not walk in for an unsecured personal loan. |
 | **O2 Lender sanction** | ₹10,90,000 – ₹23,40,000. Wide, on purpose: no bureau, ITR only ₹4.2L, LTV on ₹45L would allow more than FOIR on documents. Low end is FOIR on ITR + 70% of wife; high end is LTV. |
-| **O2 Safe carry** | ₹11,60,000 – ₹14,50,000 on the ₹40,000 thin month + 80% of wife. **Use this one.** Recommended ₹14,50,000. |
+| **O2 Safe carry** | ₹11,60,000 – ₹14,50,000 on the ₹40,000 thin month + 80% of wife. **Use this band.** Walk-in ask **₹13,50,000** — ₹14.5L is the normal-month ceiling and fails a 20% dip. |
 | **O3 Fair rate** | 9.7% – 13.9% on **LAP**. All-in APR including 1.2% fee+GST: **10.5% – 15.2%.** An unsecured PL quote at 18–22% is what the card tells him to refuse. |
 | **O4 EMI ceiling** | **₹20,500 / month** over 120 months. |
 
@@ -129,7 +129,7 @@ He did not see employer type, variable bonus, or card utilisation.
 
 **Why ₹20,500 and not ₹30,000.** Residual after ₹28,000 household and an 18% buffer (15% + 3% for one dependent), plus 40% of the claimed extra earn. ₹30,000 would assume the fat ₹80,000 month is the month that pays the EMI.
 
-**Stress.** Income −20% → FOIR ~47%, **fails** the 45% LAP self-cap. That is why the verdict is borrow less, not borrow: even ₹14.5L is tight if the till dips. Take closer to ₹12L, or split the vehicle.
+**Stress.** At ₹13.5L, income −20% → FOIR ~44%, **fits** the 45% LAP self-cap. ₹14.5L (the safe high) would sit at ~47% and fail. That is why the card asks for 13.5, not the top of the band.
 
 **Confidence.** Medium (capped at 58%). No score.
 
@@ -137,7 +137,7 @@ He did not see employer type, variable bonus, or card utilisation.
 
 > **Borrow less than ₹15,00,000**  
 > 42 yrs · self-employed · ₹60,000/mo · score unknown  
-> Ask ₹14,50,000 as a **shop-secured LAP**. Walk away above that, or EMI ₹20,500, or a sticker above 13.9%.  
+> Ask ₹13,50,000 as a **shop-secured LAP**. Walk away above ₹14,50,000, or EMI ₹20,500, or a sticker above 13.9%.  
 > Fair 9.7–13.9% LAP. APR 10.5–15.2%.  
 > **Refuse:** unsecured personal loan or merchant cash at 18%+.  
 > They may wave ₹23L against the shop. Do not take it.

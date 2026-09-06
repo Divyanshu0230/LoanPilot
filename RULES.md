@@ -18,13 +18,13 @@ I am not a credit officer and I did not pull a live bank grid. Where I am guessi
 
 | What | Value | Why | Source |
 |---|---|---|---|
-| FOIR cap — personal loan, prime salaried | 50% | Private banks often sanction PL up to ~50% of net for 750+ MNC/govt. That is their number, not a safe household number. | My judgement, typical 2024–26 private-bank PL grids |
+| FOIR cap — personal loan, prime salaried | 50% | Private banks often sanction PL up to ~50% of net for 750+ MNC/govt. That is their number, not a safe household number. | My judgement. Banks do not publish a statutory FOIR; I used a typical private-bank PL grid |
 | FOIR cap — personal loan, standard | 45% | Default unsecured grid when the file is ordinary. | My judgement |
 | FOIR cap — personal loan, risky / informal | 40% | Thin files get less FOIR, not more. | My judgement |
 | FOIR self-cap — personal loan | 40% | The extra 10 points vs a prime sanction is how people become house-poor. | My judgement |
 | FOIR cap — LAP / shop-secured | 55% | The property is the second way out. Still not 65%. | My judgement, typical NBFC LAP |
 | FOIR self-cap — LAP | 45% | Same household logic: we stay tighter than the sanction letter. | My judgement |
-| FOIR cap — home loan | 55% | Home grids are looser because the asset is the house they live in. | Typical home-loan practice + my judgement |
+| FOIR cap — home loan | 55% | Home grids are looser because the asset is the house they live in. | My judgement. RBI caps LTV, not FOIR ([5]) |
 | FOIR self-cap — home | 45% | Same 10-point gap. | My judgement |
 | FOIR cap — two-wheeler | 50% | Short tenor, small ticket. | My judgement |
 | FOIR self-cap — two-wheeler | 35% | A scooter EMI on thin surplus is how app loans start. | My judgement |
@@ -55,16 +55,16 @@ I am not a credit officer and I did not pull a live bank grid. Where I am guessi
 | Job ≥ 5 years or business ≥ 10 years | −0.35pp | Stability notch. | My judgement |
 | Business &lt; 3 years | +1 / +1.5pp | Vintage is the self-employed bureau. | My judgement |
 | Personal-loan headline floor | 10.5% | MNC notches must not push unsecured PL into home-loan territory. | My judgement |
-| Processing fee + GST | PL 2%, home 0.5%, LAP 1%, gold 0.75%, 2W 1.5%, business 2% — then × 1.18 | RBI-style all-in cost. A 12% sticker with a 2% fee is not 12%. APR is the IRR on net disbursal. | Fee: my judgement. GST 18%: statute |
-| Shop / commercial LTV | 50–60% | A kirana premises is not a Bandra flat. | My judgement, typical LAP LTV |
-| Home LTV | 75–85% | Standard home-loan LTV, unused by the three personas. | Typical home-loan practice |
-| Gold LTV | 65–75% | Public gold-loan practice. | Public practice + my judgement |
+| Processing fee + GST | PL 2%, home 0.5%, LAP 1%, gold 0.75%, 2W 1.5%, business 2% — then × 1.18 | All-in cost. A 12% sticker with a 2% fee is not 12%. APR is the IRR on net disbursal, in the spirit of the KFS. | Fee %: my judgement. GST 18% on banking services: [2]. APR / KFS: [1] |
+| Shop / commercial LTV | 50–60% | A kirana premises is not a Bandra flat. RBI home-loan LTV does not apply to a shop. | My judgement. Home LTV ceiling is [5]; I haircut commercial below that |
+| Home LTV | 75–85% | Inside the RBI housing-finance LTV caps (90 / 80 / 75 by ticket size). Unused by the three personas. | [5] |
+| Gold LTV | 65–75% | I stay at or under the 75% bank gold-loan LTV ceiling. | [3] |
 | Two-wheeler sanction ceiling | ₹3,00,000 | An e-scooter is not a car loan. | My judgement |
 | Informal 2W “Don’t borrow” lender band | ₹70,000–₹1,20,000 sales pitch, ₹0 safe | A prudent FOIR after app EMIs is ~₹0. A scooter counter may still try to book. Showing ₹0–₹0 would hide the thing she has to refuse. | My judgement |
 | Max age at maturity | 60 unsecured / 70 secured | Typical Indian grids. | Typical bank grids + my judgement |
 | Max tenure | PL 60m, home 240m, LAP 180m, gold 36m, 2W 48m, business 84m | Product practice, not a wish. | My judgement |
 | Default tenure used for the recommended ticket | PL 36m, LAP 120m, 2W 36m, gold 24m, business 60m, home 180m | The tenure we quote unless age caps it. | My judgement |
-| Stress case | Income −20% **or** rate +200 bps, worse FOIR wins | Informal and bonus-linked pay already move 20%. Rate resets happen. | My judgement |
+| Stress case | Income −20% **or** rate +200 bps, worse FOIR wins | Informal and bonus-linked pay already move 20%. Rate resets happen. If the first ticket fails, I cut the walk-in ask until stress fits. Safe high stays the normal-month ceiling. | My judgement |
 | Minimum meaningful loan | ₹25,000 | Below this we print zero rather than a toy ticket. | My judgement |
 | Confidence mix | 62% must-set + 38% additional | The must-set has to work on its own. Extra answers earn the rest. | My judgement |
 | Confidence cap if score unknown | 58% | I will not claim a tight rate without a bureau. | My judgement |
@@ -73,7 +73,7 @@ I am not a credit officer and I did not pull a live bank grid. Where I am guessi
 
 ## Rate tables (headline %, 2026)
 
-These are **not** a live market feed. Anchored to late-2025 / 2026 advertised PL, LAP, gold, 2W and home ranges, then widened for thin files.
+These are **not** a live market feed. Anchored to advertised pages I could open ([4], [6], [7]), then widened for thin files.
 
 **Personal loan**
 
@@ -151,3 +151,16 @@ Adaptive paths: a salaried MNC sees employer, tenure, variable pay, card utilisa
 - **RBI circulars I have not re-read this week.** APR-including-fee is in the spirit of fair-practice disclosure, not a legal opinion.
 
 The app surfaces guesses as assumptions on the result page. If a must-question is skipped, we do not compute. If an additional question is skipped, we widen, and we say so.
+
+## References
+
+Public pages I actually opened. Rate and FOIR cells that still say “my judgement” are still my judgement — these links only pin the claims that have a statute or an advertised page.
+
+1. RBI — Key Facts Statement (KFS) for loans and advances, circular RBI/2024-25/18 dated 15 April 2024. APR must include charges levied by the lender. https://www.rbi.org.in/scripts/NotificationUser.aspx?Id=12663&Mode=0
+2. CBIC — Notification No. 11/2017-Central Tax (Rate). Banking and other financial services (heading 9971) at 18% GST. That is why fee is multiplied by 1.18. https://cbic-gst.gov.in/pdf/central-tax-rate/notfctn-11-2017-cgst-rate-english.pdf
+3. RBI — Lending against gold jewellery, LTV not exceeding 75% (DBOD.BP.BC.No.86/21.01.023/2013-14; restated in later circulars). https://www.rbi.org.in/commonman/English/scripts/Notification.aspx?Id=1323
+4. HDFC Bank — Personal loan, advertised 9.99%–24% and processing fee + GST. I still floor a typical unsecured walk-in at 10.5%. https://www.hdfcbank.com/personal/borrow/popular-loans/personal-loan
+5. RBI — Housing finance LTV caps for individuals: 90% up to ₹30 lakh, 80% up to ₹75 lakh, 75% above that. Master Directions – Housing Finance Companies. https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12939
+6. SBI — Published loan-scheme interest rates (home and other retail). https://sbi.co.in/web/interest-rates/interest-rates/loan-schemes-interest-rates
+7. ICICI Bank — Home loan product page (advertised floating bands). https://www.icicibank.com/personal-banking/loans/home-loan
+8. RBI — Master circular on housing finance (LTV / risk-weight table). https://www.rbi.org.in/Scripts/BS_ViewMasterCirculars.aspx?Id=12824&Mode=0

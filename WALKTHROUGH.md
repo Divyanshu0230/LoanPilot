@@ -1,8 +1,9 @@
-# Walkthrough
+# Five-Minute Written Walkthrough
 
-I did not make a video. The assignment said written is fine, so this is that.
+This walkthrough follows the same path I would demonstrate in a five-minute screen recording.
+Start from the live app or localhost:3000.
 
-Open the live app or `localhost:3000`. A phone is enough. Use a laptop only if you want `/rules` or `/studio` side by side.
+A phone is enough. Use a laptop only if you want `/rules` or `/studio` side by side.
 
 ## Home
 
@@ -19,7 +20,7 @@ Two amounts on the same screen:
 - Bank high (~₹23L) is the ₹45L shop.
 - Safe high (~₹14.5L) is a thin month at the till plus most of his wife’s ₹18,000.
 
-Use the second one. His score is “I don’t know”. That is not 300. I priced the shop.
+₹14.5L is the normal-month ceiling. I ask him to walk in at **₹13.5L**, because ₹14.5L fails a 20% dip on the till. His score is “I don’t know”. That is not 300. I priced the shop.
 
 Open the card. It tells him not to sign an 18% personal loan.
 

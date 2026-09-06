@@ -426,6 +426,54 @@ export function computeConfidence(a: Answers): {
   return { confidence: c, label, why, unansweredCost };
 }
 
+function stressForTicket(
+  amount: number,
+  existing: number,
+  borrowerIncome: number,
+  rateMid: number,
+  headlineHigh: number,
+  tenureRec: number,
+  foirSafe: number,
+  emiCeiling: number,
+) {
+  const recEmi = amount > 0 ? emi(amount, rateMid, tenureRec) : 0;
+  const incomeShockFoir =
+    borrowerIncome * 0.8 > 0 ? ((existing + recEmi) / (borrowerIncome * 0.8)) * 100 : 99;
+  const rateShockEmi = amount > 0 ? emi(amount, headlineHigh + 2, tenureRec) : 0;
+  const rateShockFoir =
+    borrowerIncome > 0 ? ((existing + rateShockEmi) / borrowerIncome) * 100 : 99;
+  const stressOnIncome = incomeShockFoir >= rateShockFoir;
+  const stressedFoir = stressOnIncome ? incomeShockFoir : rateShockFoir;
+  const stressedEmi = roundEmi(stressOnIncome ? recEmi : rateShockEmi);
+  const stillFits = stressedFoir <= foirSafe * 100 + 1 && stressedEmi <= emiCeiling * 1.05;
+  return {
+    recEmi,
+    incomeShockFoir,
+    rateShockEmi,
+    rateShockFoir,
+    stressOnIncome,
+    stressedFoir,
+    stressedEmi,
+    stillFits,
+  };
+}
+
+function ticketThatSurvivesStress(
+  start: number,
+  existing: number,
+  borrowerIncome: number,
+  rateMid: number,
+  headlineHigh: number,
+  tenureRec: number,
+  foirSafe: number,
+): number {
+  const maxEmiIncome = foirSafe * borrowerIncome * 0.8 - existing;
+  const maxEmiRate = foirSafe * borrowerIncome - existing;
+  const fromIncome = principalFromEmi(Math.max(0, maxEmiIncome), rateMid, tenureRec);
+  const fromRate = principalFromEmi(Math.max(0, maxEmiRate), headlineHigh + 2, tenureRec);
+  return roundAmount(clamp(Math.min(start, fromIncome, fromRate) * 0.98, 0, start));
+}
+
 function applyLtv(
   product: ProductType,
   collType: Answers["collateralType"],
@@ -624,7 +672,7 @@ export function assess(answers: Answers, knobs: StudioKnobs = defaultKnobs()): A
         : `The ask fits both a lender FOIR of ${formatPct(foirLender * 100, 0)} and your household ceiling.`;
   }
 
-  const recommendedAmount = roundAmount(
+  let recommendedAmount = roundAmount(
     verdict === "dont_borrow"
       ? 0
       : clamp(
@@ -633,6 +681,34 @@ export function assess(answers: Answers, knobs: StudioKnobs = defaultKnobs()): A
           safeAmount.high,
         ),
   );
+
+  const firstStress = stressForTicket(
+    recommendedAmount,
+    existing,
+    borrowerIncome,
+    rateMid,
+    headline.high,
+    tenureRec,
+    foirSafe,
+    emiCeiling,
+  );
+  if (recommendedAmount > 0 && !firstStress.stillFits) {
+    const stressCap = ticketThatSurvivesStress(
+      recommendedAmount,
+      existing,
+      borrowerIncome,
+      rateMid,
+      headline.high,
+      tenureRec,
+      foirSafe,
+    );
+    if (stressCap < recommendedAmount) {
+      assumptions.push(
+        `Normal-month safe ceiling is ${formatInr(safeAmount.high)}. I cut the walk-in ask to ${formatInr(stressCap)} so a 20% income drop or a +2pp reset still fits the ${formatPct(foirSafe * 100, 0)} self-cap.`,
+      );
+      recommendedAmount = stressCap;
+    }
+  }
 
   const apr = pair(
     round1(allInApr(Math.max(recommendedAmount, 100_000), headline.low, tenureRec, feePct)),
@@ -651,17 +727,24 @@ export function assess(answers: Answers, knobs: StudioKnobs = defaultKnobs()): A
     };
   });
 
-  const recEmi = recommendedAmount > 0 ? emi(recommendedAmount, rateMid, tenureRec) : 0;
-  const incomeShockEmi = recEmi;
-  const incomeShockFoir =
-    borrowerIncome * 0.8 > 0 ? ((existing + incomeShockEmi) / (borrowerIncome * 0.8)) * 100 : 99;
-  const rateShockEmi = recommendedAmount > 0 ? emi(recommendedAmount, headline.high + 2, tenureRec) : 0;
-  const rateShockFoir =
-    borrowerIncome > 0 ? ((existing + rateShockEmi) / borrowerIncome) * 100 : 99;
-  const stressOnIncome = incomeShockFoir >= rateShockFoir;
-  const stressedFoir = stressOnIncome ? incomeShockFoir : rateShockFoir;
-  const stressedEmi = roundEmi(stressOnIncome ? incomeShockEmi : rateShockEmi);
-  const stillFits = stressedFoir <= foirSafe * 100 + 1 && stressedEmi <= emiCeiling * 1.05;
+  const {
+    incomeShockFoir,
+    rateShockEmi,
+    rateShockFoir,
+    stressOnIncome,
+    stressedFoir,
+    stressedEmi,
+    stillFits,
+  } = stressForTicket(
+    recommendedAmount,
+    existing,
+    borrowerIncome,
+    rateMid,
+    headline.high,
+    tenureRec,
+    foirSafe,
+    emiCeiling,
+  );
 
   const stress: StressCase = {
     title: stressOnIncome ? "Income drops 20%" : "Rate rises 2 points",

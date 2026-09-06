@@ -107,15 +107,15 @@ The brief did not give every household number. I wrote what I typed and why at t
 | Verdict | Borrow less | Borrow less, on the shop | Don’t borrow |
 | Product | Personal loan | LAP — not the PL he asked for | Two-wheeler, refuse it |
 | Bank may offer | ₹17.1–18.2L | ₹10.9–23.4L | ₹70k–1.2L (sales) |
-| They should take | ₹5.3–6.1L | ₹11.6–14.5L | ₹0 |
+| They should take | ₹5.3–6.1L | ₹13.5L ask (band 11.6–14.5L) | ₹0 |
 | Fair rate | 10.5–12.3% | 9.7–13.9% LAP | 17.5–24.7% |
-| Real yearly cost | ~12.7–14.9% | ~10.5–15.2% | ~20.5–29.4% |
+| Real yearly cost | ~12.9–14.9% | ~10.5–15.2% | ~20.5–29.4% |
 | EMI ceiling | ₹20,000 | ₹20,500 | ₹0 |
 | Score | 780 | Unknown, not 300 | Unknown, not 300 |
 
 **Priya.** A 780 MNC file will get a wedding loan. That is not the question. ₹8L EMI is already about ₹26,000. After the car and Bengaluru living I only leave her ₹20,000. So take about ₹6.1L, not eight. If they say 14%, that is already above my band.
 
-**Ravi.** He thinks this is a personal loan. He has a ₹45L shop with no loan on it. I send him to a loan against the shop. The high bank number is the shop. The number he should use is a weak month at the till plus most of his wife’s ₹18,000. “We can do 22 lakh on the premises” is a sales line.
+**Ravi.** He thinks this is a personal loan. He has a ₹45L shop with no loan on it. I send him to a loan against the shop. The high bank number is the shop. The band he can carry in a thin month is ₹11.6–14.5L. I ask him to walk in at ₹13.5L so a 20% dip at the till still fits. “We can do 22 lakh on the premises” is a sales line.
 
 **Anita.** The scooter would help her earn. The house cannot take another EMI. Bounce last month, 32% app loans. Don’t borrow. I still show the salesman ₹70k–1.2L so she knows what to refuse. Safe is zero.
 

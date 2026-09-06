@@ -34,6 +34,10 @@ describe("three borrowers", () => {
     expect(assessment.lenderAmount.high).toBeGreaterThanOrEqual(1_000_000);
     expect(assessment.headlineRate.high).toBeLessThan(16);
     expect(assessment.card.productRefuse.toLowerCase()).toMatch(/personal|unsecured/);
+    expect(assessment.recommendedAmount).toBeLessThan(assessment.safeAmount.high);
+    expect(assessment.recommendedAmount).toBeGreaterThanOrEqual(1_100_000);
+    expect(assessment.recommendedAmount).toBeLessThanOrEqual(1_400_000);
+    expect(assessment.stress.stillFits).toBe(true);
   });
 
   it("Anita: Don't borrow fires", () => {
